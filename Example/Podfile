@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OPGFeedbackSDK_Example' do
+  pod 'OPGFeedbackSDK', :path => '../'
+
+  target 'OPGFeedbackSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
