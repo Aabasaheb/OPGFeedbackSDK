@@ -38,11 +38,12 @@
 		607FACE51AFB9204008FA782 /* OPGFeedbackSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OPGFeedbackSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6E798FC11FADCD47A0E6129E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6F6FCCAA12D05D57AA684F10 /* OPGFeedbackSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = OPGFeedbackSDK.podspec; path = ../OPGFeedbackSDK.podspec; sourceTree = "<group>"; };
+		6E798FC11FADCD47A0E6129E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6F6FCCAA12D05D57AA684F10 /* OPGFeedbackSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = OPGFeedbackSDK.podspec; path = ../OPGFeedbackSDK.podspec; sourceTree = "<group>"; };
 		7599429C926DF62E996C0C4C /* Pods-OPGFeedbackSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPGFeedbackSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OPGFeedbackSDK_Tests/Pods-OPGFeedbackSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		78700E351F8CD03400CF54CE /* OPGFeedbackSDK_Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OPGFeedbackSDK_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		8F81FDC81155A950DE2E721D /* Pods-OPGFeedbackSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPGFeedbackSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OPGFeedbackSDK_Tests/Pods-OPGFeedbackSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		961238ED6627C5F69D1D3939 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		961238ED6627C5F69D1D3939 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B6B03BFA0917050337D64E1E /* Pods_OPGFeedbackSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OPGFeedbackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB40136BC36A868956DC1B44 /* Pods_OPGFeedbackSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OPGFeedbackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9623321515ACF96811896B4 /* Pods-OPGFeedbackSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPGFeedbackSDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				78700E351F8CD03400CF54CE /* OPGFeedbackSDK_Example-Bridging-Header.h */,
 			);
 			name = "Example for OPGFeedbackSDK";
 			path = OPGFeedbackSDK;
@@ -215,10 +217,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7FK8U2PHL6;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7FK8U2PHL6;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -324,9 +328,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh",
+				"${PODS_ROOT}/../../OPGFeedbackSDK/Assets/OPGResourceBundle.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/OPGFeedbackSDK/OPGFeedbackSDK.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,13 +525,16 @@
 			baseConfigurationReference = C9623321515ACF96811896B4 /* Pods-OPGFeedbackSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7FK8U2PHL6;
 				INFOPLIST_FILE = OPGFeedbackSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/manjunath/Documents/github release/OPGFeedbackSDK/Example/OPGFeedbackSDK/OPGFeedbackSDK_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -532,13 +543,16 @@
 			baseConfigurationReference = D9AB8A56D4318BBE0314F822 /* Pods-OPGFeedbackSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7FK8U2PHL6;
 				INFOPLIST_FILE = OPGFeedbackSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/manjunath/Documents/github release/OPGFeedbackSDK/Example/OPGFeedbackSDK/OPGFeedbackSDK_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -546,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7599429C926DF62E996C0C4C /* Pods-OPGFeedbackSDK_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7FK8U2PHL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -559,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -567,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F81FDC81155A950DE2E721D /* Pods-OPGFeedbackSDK_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7FK8U2PHL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,7 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

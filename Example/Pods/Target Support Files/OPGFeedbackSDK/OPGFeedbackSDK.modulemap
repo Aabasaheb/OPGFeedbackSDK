@@ -1,0 +1,6 @@
+framework module OPGFeedbackSDK {
+  umbrella header "OPGFeedbackSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
