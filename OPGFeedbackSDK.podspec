@@ -19,7 +19,7 @@ The OnePoint Global Mobile App SDK allows you to build your own research capabil
 
   s.ios.deployment_target = '8.0'
   s.ios.vendored_library = 'lib/libOnePointSDK.a', 'lib/libOnePoint.Runtime.a'
-  s.preserve_paths = 'libOnePointSDK.a', 'libOnePoint.Runtime.a'
+  #s.preserve_paths = 'libOnePointSDK.a', 'libOnePoint.Runtime.a'
 
   s.source_files = "include/OPGSDK/*.h", "include/OnePoint.Runtime/*.h"
   s.public_header_files = "include/OPGSDK/*.h", "include/OnePoint.Runtime/*.h"

@@ -24,10 +24,6 @@
       "lib/libOnePoint.Runtime.a"
     ]
   },
-  "preserve_paths": [
-    "libOnePointSDK.a",
-    "libOnePoint.Runtime.a"
-  ],
   "source_files": [
     "include/OPGSDK/*.h",
     "include/OnePoint.Runtime/*.h"
