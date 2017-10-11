@@ -25,7 +25,7 @@ The OnePoint Global Mobile App SDK allows you to build your own research capabil
   s.public_header_files = "include/OPGSDK/*.h", "include/OnePoint.Runtime/*.h"
   
   s.resource_bundles = {
-    'OPGFeedbackSDK' => ['OfflineSDKLib/Assets/OPGResourceBundle.bundle']
+    'OPGFeedbackSDK' => ['OPGFeedbackSDK/Assets/OPGResourceBundle.bundle']
   }
 
   s.resources = "OPGFeedbackSDK/Assets/OPGResourceBundle.bundle"
