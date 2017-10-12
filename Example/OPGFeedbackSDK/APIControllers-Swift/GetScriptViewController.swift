@@ -49,7 +49,7 @@ class GetScriptViewController: UIViewController, UITextFieldDelegate
         let survey = OPGSurvey()
 
         if((self.surveyId.text?.isEmpty)! ||  (self.surveyRef.text?.isEmpty)! || (self.surveyName.text?.isEmpty)!) {
-            self.showAlert(titleStr: "OPGSDKv1.0", message: "Please provide a valid input")
+            self.showAlert(titleStr: "OPGSDKv0.1.0", message: "Please provide a valid input")
             return
         }
 
@@ -68,11 +68,11 @@ class GetScriptViewController: UIViewController, UITextFieldDelegate
         
         if ( obj?.isSuccess.int32Value==1)
         {
-            self.showAlert(titleStr: "OPGSDKv1.0", message: "Script Download Successful!")
+            self.showAlert(titleStr: "OPGSDKv0.1.0", message: "Script Download Successful!")
         }
         else
         {
-            self.showAlert(titleStr: "OPGSDKv1.0", message: "Script Download Failed!")
+            self.showAlert(titleStr: "OPGSDKv0.1.0", message: "Script Download Failed!")
         }
         
     }

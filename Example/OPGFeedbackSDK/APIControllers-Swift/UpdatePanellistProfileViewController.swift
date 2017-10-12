@@ -68,13 +68,13 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         }
     }
     
-    func keyboardWillShow(notification: NSNotification)
+    @objc func keyboardWillShow(notification: NSNotification)
     {
         self.viewHeight.constant = -170                    //iPhone 5S
         self.view.updateConstraints()
     }
     
-    func keyboardWillHide(notification: NSNotification)
+    @objc func keyboardWillHide(notification: NSNotification)
     {
         self.viewHeight.constant = 20                       //iPhone 5S
         self.view.updateConstraints()
@@ -115,7 +115,7 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         {
             do {
                 try sdk.update(profile)
-                let alertController = UIAlertController(title: "OPGSDKv1.0", message: "Profile Updated Successfully", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "OPGSDKv0.1.0", message: "Profile Updated Successfully", preferredStyle: .alert)
 
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
@@ -126,7 +126,7 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
             catch{
                 print("Profile Update Failed")         /* @"Error Occured. Contact Support!" */
 
-                let alertController = UIAlertController(title: "OPGSDKv1.0", message: "Profile Update Failed", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "OPGSDKv0.1.0", message: "Profile Update Failed", preferredStyle: .alert)
 
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
@@ -165,7 +165,7 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
     }
 
     
-    func doneClick()
+    @objc func doneClick()
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -173,7 +173,7 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         txtDOB.resignFirstResponder()
     }
     
-    func cancelClick()
+    @objc func cancelClick()
     {
         txtDOB.resignFirstResponder()
     }
