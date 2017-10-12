@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		318A47950AA21466CD45033A6BE072DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4924365967826979F6FDD8DC01AAEE2B /* OPGResourceBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6941B874EA2DD21CB0B8AAD4AFB99F32 /* OPGResourceBundle.bundle */; };
 		5C91C4E59E4FE8CD023AC610215723D8 /* Pods-OPGFeedbackSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBE470B726C5CBDA2D31E7946D2BD72 /* Pods-OPGFeedbackSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		612490CE22D35F3C0752B9B88B6C37C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		78886DFAA87FA7CAE42454723AA156FF /* Pods-OPGFeedbackSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A04ABF518CE23F17E5364563E09290EC /* Pods-OPGFeedbackSDK_Tests-dummy.m */; };
@@ -20,7 +21,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3410F863CB483D0A4F66202644DE5B39;
+			remoteGlobalIDString = F2E3FB9EA0945F7035931161804864E5;
 			remoteInfo = "OPGFeedbackSDK-OPGFeedbackSDK";
 		};
 /* End PBXContainerItemProxy section */
@@ -557,18 +558,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		65B9358341E9E93CBAE667DEB788FB4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0073B2C27D4D95B9B17CD53A7CD8BAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				612490CE22D35F3C0752B9B88B6C37C0 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A53B933F7C2EAF0E3E62F6F1C5FC50C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1275,23 +1276,6 @@
 			productReference = C7E72811E1F0A40A23B55643D7A0955B /* Pods_OPGFeedbackSDK_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3410F863CB483D0A4F66202644DE5B39 /* OPGFeedbackSDK-OPGFeedbackSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9000527F36D75D1D051C6119CFD9A836 /* Build configuration list for PBXNativeTarget "OPGFeedbackSDK-OPGFeedbackSDK" */;
-			buildPhases = (
-				53975124219A48EDE72734AFEE11D96D /* Sources */,
-				A53B933F7C2EAF0E3E62F6F1C5FC50C6 /* Frameworks */,
-				FB790DA4AAB86E337431BC3537DAB208 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OPGFeedbackSDK-OPGFeedbackSDK";
-			productName = "OPGFeedbackSDK-OPGFeedbackSDK";
-			productReference = 118DF8BCF44B0AC7CE7E6DBA37423745 /* OPGFeedbackSDK.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		593693FE48234F5A6C64C6C9FC3386D4 /* Pods-OPGFeedbackSDK_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D62A393B60D1EEBB5F0AEA069027D031 /* Build configuration list for PBXNativeTarget "Pods-OPGFeedbackSDK_Example" */;
@@ -1309,6 +1293,23 @@
 			productName = "Pods-OPGFeedbackSDK_Example";
 			productReference = 7BE45F9C8BA1579184F5154E37B95075 /* Pods_OPGFeedbackSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		F2E3FB9EA0945F7035931161804864E5 /* OPGFeedbackSDK-OPGFeedbackSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BF9C6040B786BFDB27D2000AE4AA36E /* Build configuration list for PBXNativeTarget "OPGFeedbackSDK-OPGFeedbackSDK" */;
+			buildPhases = (
+				54C3D167168D914D3A00BF3EB49007F6 /* Sources */,
+				65B9358341E9E93CBAE667DEB788FB4D /* Frameworks */,
+				CC2C674C033CC2E632D2632BEFB0643F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OPGFeedbackSDK-OPGFeedbackSDK";
+			productName = "OPGFeedbackSDK-OPGFeedbackSDK";
+			productReference = 118DF8BCF44B0AC7CE7E6DBA37423745 /* OPGFeedbackSDK.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -1331,7 +1332,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3410F863CB483D0A4F66202644DE5B39 /* OPGFeedbackSDK-OPGFeedbackSDK */,
+				F2E3FB9EA0945F7035931161804864E5 /* OPGFeedbackSDK-OPGFeedbackSDK */,
 				593693FE48234F5A6C64C6C9FC3386D4 /* Pods-OPGFeedbackSDK_Example */,
 				027E01AD3CA79D6EAF4A544878F7E3D0 /* Pods-OPGFeedbackSDK_Tests */,
 			);
@@ -1339,17 +1340,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FB790DA4AAB86E337431BC3537DAB208 /* Resources */ = {
+		CC2C674C033CC2E632D2632BEFB0643F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4924365967826979F6FDD8DC01AAEE2B /* OPGResourceBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53975124219A48EDE72734AFEE11D96D /* Sources */ = {
+		54C3D167168D914D3A00BF3EB49007F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1378,28 +1380,12 @@
 		C02F4427DBCD97C2D8BC49B8861A9500 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "OPGFeedbackSDK-OPGFeedbackSDK";
-			target = 3410F863CB483D0A4F66202644DE5B39 /* OPGFeedbackSDK-OPGFeedbackSDK */;
+			target = F2E3FB9EA0945F7035931161804864E5 /* OPGFeedbackSDK-OPGFeedbackSDK */;
 			targetProxy = 304022D88F4F1E5BFCEA295DE976DC11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1794A98AA5E52F2BF6BE9AAA1FA63257 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = OPGFeedbackSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1565,6 +1551,38 @@
 			};
 			name = Release;
 		};
+		8329489F61FA676559803D3EEC8327CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = OPGFeedbackSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		9FFAD3A801924004767C7C81C2B0CAB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = OPGFeedbackSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		A8E7AB58938B3E45BA856C7028F44F64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D983BB3F07B9F84B8A570ABE5AB73D2 /* Pods-OPGFeedbackSDK_Tests.debug.xcconfig */;
@@ -1637,22 +1655,6 @@
 			};
 			name = Debug;
 		};
-		EE03E68F918426DD6D6EAD63F9A6E9CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = OPGFeedbackSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1665,11 +1667,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9000527F36D75D1D051C6119CFD9A836 /* Build configuration list for PBXNativeTarget "OPGFeedbackSDK-OPGFeedbackSDK" */ = {
+		8BF9C6040B786BFDB27D2000AE4AA36E /* Build configuration list for PBXNativeTarget "OPGFeedbackSDK-OPGFeedbackSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1794A98AA5E52F2BF6BE9AAA1FA63257 /* Debug */,
-				EE03E68F918426DD6D6EAD63F9A6E9CB /* Release */,
+				9FFAD3A801924004767C7C81C2B0CAB7 /* Debug */,
+				8329489F61FA676559803D3EEC8327CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
