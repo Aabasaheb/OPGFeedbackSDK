@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/OPGFeedbackSDK.svg?style=flat)](http://cocoapods.org/pods/OPGFeedbackSDK)
 [![Platform](https://img.shields.io/cocoapods/p/OPGFeedbackSDK.svg?style=flat)](http://cocoapods.org/pods/OPGFeedbackSDK)
 
+## Introduction
+
+The OPGFeedbackSDK allows you to build your own research capabilities into mobile applications. Built for iOS, you can integrate the OnePoint Global research capability and start getting feedback from your users. Using the OnePoint Global Question Editor or Studio you can build custom surveys to suit any need.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
