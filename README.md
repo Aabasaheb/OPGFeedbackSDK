@@ -26,7 +26,7 @@ pod 'OPGFeedbackSDK'
 
 ## Author
 
-manjunath.ramesh@onepointglobal.com, manjunath.ramesh@onepointglobal.com
+manjunath.ramesh@onepointglobal.com
 
 ## License
 
