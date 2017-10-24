@@ -23,7 +23,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'OPGFeedbackSDK'
 ```
-Note: If you don't want to use CocoaPods, you can manually [download and configure the OPGFeedback SDK] (https://github.com/OnePointGlobal/OnePoint-Global-Mobile-App-SDK-iOS).
+Note: If you don't want to use CocoaPods, you can manually [download and configure the OPGFeedback SDK](https://github.com/OnePointGlobal/OnePoint-Global-Mobile-App-SDK-iOS).
 ## Author
 
 manjunath.ramesh@onepointglobal.com
