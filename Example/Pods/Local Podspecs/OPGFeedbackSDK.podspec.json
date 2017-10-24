@@ -26,10 +26,12 @@
   },
   "source_files": [
     "include/OPGSDK/*.h",
+    "include/OPGSDK/Other Supporting Files/*.h",
     "include/OnePoint.Runtime/*.h"
   ],
   "public_header_files": [
     "include/OPGSDK/*.h",
+    "include/OPGSDK/Other Supporting Files/*.h",
     "include/OnePoint.Runtime/*.h"
   ],
   "resource_bundles": {

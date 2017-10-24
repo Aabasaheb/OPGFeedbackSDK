@@ -1,1 +1,1 @@
-../../../../../include/OPGSDK/zxing-all-in-one.h
+../../../../../include/OPGSDK/Other Supporting Files/zxing-all-in-one.h
