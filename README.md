@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://www.onepointglobal.com/Images/OPG_Github_logo.png"/>
+</p>
+
 # OPGFeedbackSDK
 
 [![CI Status](http://img.shields.io/travis/manjunath.ramesh@onepointglobal.com/OPGFeedbackSDK.svg?style=flat)](https://travis-ci.org/manjunath.ramesh@onepointglobal.com/OPGFeedbackSDK)
