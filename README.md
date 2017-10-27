@@ -26,6 +26,11 @@ Note: If you don't want to use CocoaPods, you can manually [download and configu
 
 ## Features
 
+<p align="center">
+  <img src="https://www.onepointglobal.com/Images/OPG_dash.png"/>
+</p>
+
+
 ### Surveys
 
 Surveys offer a great opportunity to get input from your target market. OPGFeedbackSDK provides an easy way to integrate survey capability into your iOS mobile apps. Using the OnePoint Global Question Editor or Studio, you can build custom surveys to suit any need.
