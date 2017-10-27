@@ -42,7 +42,7 @@ OPGFeedbackSDK provides developers the ability to create a coherent color theme 
 ### Media
 OPGSDKFeedback allows the respondents take media questions within a survey enabling them to easily upload images, videos and audio responses.
 
-### Locations
+### Location
 OPGFeedbackSDK lets you take advantage of built-in GPS units in mobile phones to conduct location based surveys. These surveys can made to popup on respondent's smartphones when they enter/exit a survey location like Walmart, Starbucks or an entertainment venue.
 
 ### Social
