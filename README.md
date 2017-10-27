@@ -13,11 +13,6 @@
 
 The OPGFeedbackSDK allows you to build your own research capabilities into mobile applications. Built for iOS, you can integrate the OnePoint Global research capability and start getting feedback from your users. Using the OnePoint Global Question Editor or Studio you can build custom surveys to suit any need.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -28,6 +23,13 @@ it, simply add the following line to your Podfile:
 pod 'OPGFeedbackSDK'
 ```
 Note: If you don't want to use CocoaPods, you can manually [download and configure the OPGFeedback SDK](https://github.com/OnePointGlobal/OnePoint-Global-Mobile-App-SDK-iOS).
+
+## Features
+
+### Surveys
+
+Surveys offer a great opportunity to get input from your target market. OPGFeedbackSDK provides an easy way to integrate survey capability into your iOS mobile apps.Using the OnePoint Global Question Editor or Studio, you can build custom surveys to suit any need.
+
 ## Author
 
 manjunath.ramesh@onepointglobal.com
