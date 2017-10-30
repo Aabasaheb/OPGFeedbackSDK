@@ -50,7 +50,7 @@ Social Login seamlessly integrates with your existing social media accounts. Hav
 
 ## Author
 
-manjunath.ramesh@onepointglobal.com
+manjunath.ramesh@onepointglobal.com, chinthan.m@onepointglobal.com 
 
 ## License
 
