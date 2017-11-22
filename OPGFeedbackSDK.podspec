@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OPGFeedbackSDK'
-  s.version          = '0.1.0'
-  s.summary          = 'First OPGFeedbackSDK Pod.'
+  s.version          = '0.1.1'
+  s.summary          = 'OPGFeedbackSDK Pod.'
 
   s.description      = <<-DESC
 The OnePoint Global Mobile App SDK allows you to build your own research capabilities into mobile applications.
@@ -10,7 +10,7 @@ The OnePoint Global Mobile App SDK allows you to build your own research capabil
 
   s.homepage         = 'https://github.com/OnePointGlobal/OPGFeedbackSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'manjunath.ramesh@onepointglobal.com' => 'manjunath.ramesh@onepointglobal.com' }
+  s.authors           = { 'manjunath.ramesh@onepointglobal.com' => 'manjunath.ramesh@onepointglobal.com', 'chinthan.m@onepointglobal.com' => 'chinthan.m@onepointglobal.com' }
   s.source           = { :git => 'https://github.com/OnePointGlobal/OPGFeedbackSDK.git', :tag => s.version.to_s }
 
 
