@@ -306,3 +306,6 @@ audio{
     margin-top: 20px;
     display: inline-block;
 }
+.signaturecontainer .customuploadedSignature img{
+    width:100%;
+}
