@@ -71,7 +71,7 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
 
     func showAlert(alertMessage : String)
     {
-        let alertController = UIAlertController(title: "OPGSDKv0.1.0", message: alertMessage, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: alertMessage, preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
