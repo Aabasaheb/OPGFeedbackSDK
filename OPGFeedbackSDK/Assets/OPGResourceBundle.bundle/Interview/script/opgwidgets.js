@@ -242,6 +242,34 @@
                               }
           }
      });
+ e.widget("opg.currencyinput", {
+          initSelector: "input[type='currencyinput']",
+          _create: function() {
+          this._on(this.element, {
+                   click: "_getCurrency"
+                   });
+          },
+          _getCurrency: function() {
+          var t = this;
+          var tValue = this.element.val();
+          var currentRef = this.element;
+          try {
+          cordova.exec(function(n) {
+                       console.log(n);
+                       var jsonObj = jQuery.parseJSON(n);
+                       currentRef.val(jsonObj.value);
+                       //this.element.attr("value", jsonObj.path);
+                       }, function(n) {
+                       console.log(tValue);
+                       }, "CurrencyPlugin", "callcurrency",[tValue]);
+          } catch (n) {
+          console.log(n);
+          }
+          },
+          _destroy: function() {
+          domHandle.remove()
+          }
+          });
     e.widget("opg.barcode", {
         initSelector: "input[data-role=barcode]",
         _create: function() {
