@@ -248,7 +248,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				6D12C241EAA6254199C0903F /* [CP] Embed Pods Frameworks */,
 				9707D363E4A3D17C87B3CE0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -268,8 +267,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				CBE032CD5124A0508BACA5A3 /* [CP] Embed Pods Frameworks */,
-				E458C45D62693E7C9D64C687 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,24 +365,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D12C241EAA6254199C0903F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OPGFeedbackSDK/OPGFeedbackSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OPGFeedbackSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		828E8C6AC4DCBEDE275DC734 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,45 +391,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh",
 				"${PODS_ROOT}/../../OPGFeedbackSDK/Assets/OPGResourceBundle.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/OPGFeedbackSDK/OPGFeedbackSDK.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/OPGFeedbackSDK/OPGFeedbackSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OPGResourceBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OPGFeedbackSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CBE032CD5124A0508BACA5A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Tests/Pods-OPGFeedbackSDK_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E458C45D62693E7C9D64C687 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Tests/Pods-OPGFeedbackSDK_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
