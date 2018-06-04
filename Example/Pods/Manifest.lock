@@ -1,5 +1,5 @@
 PODS:
-  - OPGFeedbackSDK (0.1.3)
+  - OPGFeedbackSDK (0.1.4)
 
 DEPENDENCIES:
   - OPGFeedbackSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  OPGFeedbackSDK: 7d18698779fbf2d26f2de2ed6bed19c39d5fed10
+  OPGFeedbackSDK: f0b98e76894ff3ef38706a88f12d65f7dde5952c
 
 PODFILE CHECKSUM: 1d217ae387c746fdec984ba83d2302cc99d48c7d
 
