@@ -10,7 +10,6 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController, UITextFieldDelegate
 {
-
     @IBOutlet weak var txtEmailID: UITextField!
     var obj : OPGForgotPassword!
     override func viewDidLoad() {
@@ -38,30 +37,21 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate
         }
         catch{
             print("Forgot Password Failed")         /* @"Error Occured. Contact Support!" */
-            
         }
         
         if (obj?.isSuccess.int32Value==1)
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Mail Sent Successfully", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Mail Sent Successfully", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
         else
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Mail Sending Failed", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Mail Sending Failed", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
-        
-        
     }
-
-
 }

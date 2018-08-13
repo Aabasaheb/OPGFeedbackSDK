@@ -11,7 +11,6 @@ import UIKit
 class CountryTableViewController: UITableViewController
 {
     var countryList : [OPGCountry] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Country"
@@ -22,7 +21,6 @@ class CountryTableViewController: UITableViewController
         }
         catch{
             print("GetCountries not working")         /* @"Error Occured. Contact Support!" */
-            
         }
     }
 
@@ -32,7 +30,6 @@ class CountryTableViewController: UITableViewController
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -43,14 +40,11 @@ class CountryTableViewController: UITableViewController
         return self.countryList.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Country", for: indexPath)
-
         let country : OPGCountry = self.countryList[indexPath.row]
         cell.textLabel?.text=country.name
         return cell
     }
-
 }

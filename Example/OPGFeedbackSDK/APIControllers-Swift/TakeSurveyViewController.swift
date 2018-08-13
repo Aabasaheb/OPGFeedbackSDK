@@ -44,6 +44,5 @@ class TakeSurveyViewController : OPGViewController, OPGSurveyDelegate
     
     func didSurveyCompleted() {
         self.navigationController?.popViewController(animated: true)
-
     }
 }

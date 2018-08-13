@@ -38,7 +38,6 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         txtDOB.delegate=self
         txtGender.delegate=self
         txtPostalCode.delegate=self
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
@@ -53,7 +52,6 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
             NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         }
-        
         if textField.isEqual(txtDOB)
         {
             self.pickUpDate(textField: self.txtDOB)
@@ -115,31 +113,25 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         {
             do {
                 try sdk.update(profile)
-                let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Profile Updated Successfully", preferredStyle: .alert)
-
+                let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Profile Updated Successfully", preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
-
                 present(alertController, animated: true, completion: nil)
 
             }
             catch{
                 print("Profile Update Failed")         /* @"Error Occured. Contact Support!" */
 
-                let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Profile Update Failed", preferredStyle: .alert)
-
+                let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Profile Update Failed", preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)
-
                 present(alertController, animated: true, completion: nil)
-                
             }
         }
     }
     
     func pickUpDate(textField : UITextField)
     {
-        
         // DatePicker
         let rect = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216)
         self.datePicker = UIDatePicker(frame:rect)
@@ -161,10 +153,8 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         textField.inputAccessoryView = toolBar
-        
     }
 
-    
     @objc func doneClick()
     {
         let dateFormatter = DateFormatter()
@@ -177,5 +167,4 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
     {
         txtDOB.resignFirstResponder()
     }
-
 }

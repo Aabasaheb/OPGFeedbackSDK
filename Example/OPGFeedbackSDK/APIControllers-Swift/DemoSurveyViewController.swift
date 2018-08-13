@@ -10,7 +10,6 @@ import UIKit
 
 class DemoSurveyViewController: UIViewController, UITextFieldDelegate
 {
-
     @IBOutlet weak var txtUsername : UITextField!
     @IBOutlet weak var txtSharedKey : UITextField!
     var surveyList : NSArray = []
@@ -36,14 +35,13 @@ class DemoSurveyViewController: UIViewController, UITextFieldDelegate
     @IBAction func btnGOTapped(_ sender:AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        if ((self.txtUsername.text?.characters.count)!>0 && (self.txtSharedKey.text?.characters.count)!>0)
+        if ((self.txtUsername.text?.count)!>0 && (self.txtSharedKey.text?.count)!>0)
         {
             do {
                 obj = try sdk.authenticate(self.txtUsername.text, password: self.txtSharedKey.text) as OPGAuthenticate
             }
             catch{
                 print("Authentication not working")         /* @"Error Occured. Contact Support!" */
-                
             }
             
             do {
@@ -51,7 +49,6 @@ class DemoSurveyViewController: UIViewController, UITextFieldDelegate
             }
             catch{
                 print("User Survey not working")         /* @"Error Occured. Contact Support!" */
-                
             }
             self.performSegue(withIdentifier: "embedSurveyList", sender: sender)
         }
@@ -59,7 +56,6 @@ class DemoSurveyViewController: UIViewController, UITextFieldDelegate
         {
             print("Username and Password can not be empty")
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,8 +64,5 @@ class DemoSurveyViewController: UIViewController, UITextFieldDelegate
             let surveyListVC : SurveyListViewController  = segue.destination as! SurveyListViewController
             surveyListVC.surveyListArray = self.surveyList
         }
-        
     }
-
-
 }

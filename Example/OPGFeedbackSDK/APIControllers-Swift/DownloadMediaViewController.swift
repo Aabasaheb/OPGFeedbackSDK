@@ -10,7 +10,6 @@ import UIKit
 
 class DownloadMediaViewController: UIViewController, UITextFieldDelegate
 {
-
     @IBOutlet weak var txtMediaID: UITextField!
     @IBOutlet weak var txtMediaType: UITextField!
     var obj : OPGDownloadMedia?
@@ -34,34 +33,26 @@ class DownloadMediaViewController: UIViewController, UITextFieldDelegate
     @IBAction func downloadMedia(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        
         do {
             obj = try sdk.downloadMediaFile(txtMediaID.text, mediaType: txtMediaType.text)
         }
         catch{
             print("Download Media Failed")         /* @"Error Occured. Contact Support!" */
-            
         }
         
         if (obj?.isSuccess.int32Value==1)
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Media Download Successful!", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Media Download Successful!", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
         else
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Media Download Failed!", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Media Download Failed!", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
     }
-
-
 }

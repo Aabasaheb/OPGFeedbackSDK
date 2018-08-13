@@ -26,7 +26,6 @@ class GetPanelsViewController: UITableViewController
         }
         catch{
             print("Get Panels not working")         /* @"Error Occured. Contact Support!" */
-            
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -51,15 +50,12 @@ class GetPanelsViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "CELL") as UITableViewCell!
+        var cell = tableView.dequeueReusableCell(withIdentifier: "CELL") as UITableViewCell?
         if (cell == nil) {
             cell = UITableViewCell(style:.default, reuseIdentifier: "CELL")
         }
         // setup cell without force unwrapping it
         cell?.textLabel!.text = self.panelsIDList[(indexPath as NSIndexPath).row] as? String
         return cell!
-        
-        
     }
-
 }

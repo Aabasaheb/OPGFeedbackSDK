@@ -33,9 +33,7 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func getSUrveySwift(_ sender: AnyObject)
     {
-        
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        
         if self.panelIDField.text == ""
         {
             do {
@@ -43,7 +41,6 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
             }
             catch{
                 print("User Survey not working")         /* @"Error Occured. Contact Support!" */
-                
             }
         }
         else
@@ -53,12 +50,8 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
             }
             catch{
                 print("User Survey not working")         /* @"Error Occured. Contact Support!" */
-                
             }
         }
-        
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -69,5 +62,4 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
             surveyListVC.surveyListArray = self.surveyList
         }
     }
-
 }

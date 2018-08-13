@@ -15,8 +15,6 @@
 import UIKit
 import Foundation
 
-
-
 class SurveyListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var surveyListTableView : UITableView!
@@ -26,9 +24,7 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
         self.surveyListTableView.separatorColor = UIColor.orange
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +51,7 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let survey : OPGSurvey = self.surveyListArray.object(at: (indexPath as NSIndexPath).row) as! OPGSurvey
-        self.surveyReference = survey.surveyReference as NSString!    // Survey reference property of OPGSurvey class is passed to next controller which is required to run the survey.
+        self.surveyReference = survey.surveyReference as NSString?    // Survey reference property of OPGSurvey class is passed to next controller which is required to run the survey.
         self.performSegue(withIdentifier: "embedTakeSurvey", sender: self)
     }
     
@@ -66,7 +62,5 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
             let viewController : TakeSurveyViewController = segue.destination as! TakeSurveyViewController
             viewController.surveyRef=self.surveyReference as String
         }
-        
     }
-    
 }

@@ -15,7 +15,6 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.txtGoogleToken.delegate=self
         self.txtFacebookToken.delegate=self
     }
@@ -34,7 +33,6 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
-            
         }
         
         if obj!.isSuccess.int32Value==1
@@ -56,7 +54,6 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
-            
         }
         
         if obj!.isSuccess.int32Value==1
@@ -71,13 +68,11 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
 
     func showAlert(alertMessage : String)
     {
-        let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: alertMessage, preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: alertMessage, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
-    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         textField.resignFirstResponder()

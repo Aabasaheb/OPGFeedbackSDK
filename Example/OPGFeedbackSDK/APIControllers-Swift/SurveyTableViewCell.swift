@@ -21,14 +21,11 @@ class SurveyTableViewCell : UITableViewCell
     @IBOutlet weak var lblSurveyDate: UILabel!
     @IBOutlet weak var lblSurveyDesc: UILabel!
     @IBOutlet weak var imgSurveyIcon: UIImageView!
-    
-
 
     func fillCell(_ survey: OPGSurvey)
     {
         self.lblSurveyName.text=survey.surveyName
         self.lblSurveyDesc.text=survey.surveyDescription
         self.lblSurveyDate.text=survey.lastUpdatedDate
-
     }
 }

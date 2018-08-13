@@ -10,7 +10,6 @@ import UIKit
 
 class AuthenticationViewController: UIViewController, UITextFieldDelegate
 {
-
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     var obj : OPGAuthenticate?
@@ -30,38 +29,31 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate
     @IBAction func authenticate(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        
         do {
             obj = try sdk.authenticate(self.username.text, password: self.password.text)
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
-            
         }
         
         if obj!.isSuccess.int32Value==1
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Authentication Successful", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Authentication Successful", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
         else
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.2", message: "Authentication Failed", preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Authentication Failed", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
-            
             present(alertController, animated: true, completion: nil)
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   
         textField.resignFirstResponder()
         return true
     }
-
 }
