@@ -101,7 +101,7 @@
 		21FF2F7286A3B8AEDB381FA7AA2CBD85 /* OPGAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGAvailability.h; sourceTree = "<group>"; };
 		22F563246651F8C8CB72301BFF85C290 /* Validation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		231A7CC6CD4E03EC08FD58E11FCE368D /* IProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IProperty.h; sourceTree = "<group>"; };
-		232894758EF27EA0F6A1970DAB748D70 /* Pods_OPGFeedbackSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OPGFeedbackSDK_Example.framework; path = "Pods-OPGFeedbackSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		232894758EF27EA0F6A1970DAB748D70 /* Pods_OPGFeedbackSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OPGFeedbackSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B750EB8105C925A9CA79BEAF59099A /* OPGSurveyPanel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGSurveyPanel.h; sourceTree = "<group>"; };
 		244425777F977A9B434E8756D6D6B1AA /* IQuestions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IQuestions.h; sourceTree = "<group>"; };
 		245E542D05EF7EA5976C60850DE887C6 /* ConstantDouble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ConstantDouble.h; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		2AF4A2D0FE1DDEFAB495596124C00600 /* IteratorTypeConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IteratorTypeConstants.h; sourceTree = "<group>"; };
 		2C7E1291F4B5A94CDB5498BF618F8114 /* ExceptionsAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ExceptionsAttribute.h; sourceTree = "<group>"; };
 		2E0EF1AB420E3431C902C082183A9172 /* ElementAlignments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ElementAlignments.h; sourceTree = "<group>"; };
-		2EBE91898CDDE0D9CFD9E95645DC2432 /* OPGFeedbackSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OPGFeedbackSDK.bundle; path = "OPGFeedbackSDK-OPGFeedbackSDK.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EBE91898CDDE0D9CFD9E95645DC2432 /* OPGFeedbackSDK.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OPGFeedbackSDK.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F03FD768064F3886B968D923494C00B /* CallStackItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CallStackItem.h; sourceTree = "<group>"; };
 		2F08767DEC5545D0ABFD8B10103AEA6C /* MethodsRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MethodsRecord.h; sourceTree = "<group>"; };
 		2F4D51B6FA2B508692E966153381634D /* PKMultipartInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PKMultipartInputStream.h; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		4BA5365781998CAE9274991845912888 /* OPGAuthenticate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGAuthenticate.h; sourceTree = "<group>"; };
 		4BB7CF3E7C4792EF8B82032EF9A14694 /* OPGLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGLocation.h; sourceTree = "<group>"; };
 		4CA04CFCB7957E46711E5A5DEAF49232 /* crc32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = crc32.h; sourceTree = "<group>"; };
-		4D4C209E16B5CCF0E21D44EA16F06E21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4D4C209E16B5CCF0E21D44EA16F06E21 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4E5A3173195FE8146AA40D487954474B /* NavigationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NavigationTypes.h; sourceTree = "<group>"; };
 		4E7D664440B1E0C07FB8FC792649F494 /* AstIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AstIdentifier.h; sourceTree = "<group>"; };
 		4ECBC9835DA48B6FA1D1615D41AEAFAA /* LabelInsert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LabelInsert.h; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		5968245EAC0D08F758C990464B4C4B9A /* XmlControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XmlControl.h; sourceTree = "<group>"; };
 		5A818045AA1E4AD413CBB932823A6FE2 /* ConstantUtf8.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ConstantUtf8.h; sourceTree = "<group>"; };
 		5B371C530D731D8162CE04F8F5506DAE /* WebContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebContext.h; sourceTree = "<group>"; };
-		5B467C5719CE34D00BD7B1EA3370B464 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5B467C5719CE34D00BD7B1EA3370B464 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C7F8E167A0F656C0B5CB2E9202B0AB7 /* HttpContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HttpContext.h; sourceTree = "<group>"; };
 		5CDAA14B83A734307C8BD874FA943FEA /* ObjectTypesConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ObjectTypesConstants.h; sourceTree = "<group>"; };
 		5D3E6DEEFAEE782E7337BADA152801D9 /* LocalVariableTable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LocalVariableTable.h; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		7300DDB10AA321090D9CBE097B8CE556 /* XmlInterNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XmlInterNavigation.h; sourceTree = "<group>"; };
 		73BE1B0D650216B3962B91032FF80679 /* ReadOnlyCollectionObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ReadOnlyCollectionObject.h; sourceTree = "<group>"; };
 		7438917D3CE00DE5B945D6741985C319 /* QuestionError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QuestionError.h; sourceTree = "<group>"; };
-		74403BBDFD6DA9FF02A209394E388AAF /* Pods_OPGFeedbackSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OPGFeedbackSDK_Tests.framework; path = "Pods-OPGFeedbackSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74403BBDFD6DA9FF02A209394E388AAF /* Pods_OPGFeedbackSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OPGFeedbackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E0548EBDDD2EE3F3B02600A4B7660C /* InterviewSampleField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InterviewSampleField.h; sourceTree = "<group>"; };
 		7524D0E0C7BD22A7E6E22C0C98765E9B /* OPGParseResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGParseResult.h; sourceTree = "<group>"; };
 		7539E377E4B9664D8C4BE9C5918DC1F8 /* AttributeRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AttributeRecord.h; sourceTree = "<group>"; };
@@ -329,7 +329,7 @@
 		92D88A731F8A71588CF6466FFCD7009C /* OPGPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGPluginResult.h; sourceTree = "<group>"; };
 		9364B0BFE9DFC0F03AEC63AF3105D5DC /* CategoryStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CategoryStyle.h; sourceTree = "<group>"; };
 		939250E448D1680447191078321B0429 /* OPGCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGCapture.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93A8443E9261ADBAD7AC00CB9B37A4FC /* Reflector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reflector.h; sourceTree = "<group>"; };
 		943A94496539C79C770E23D8B616FAA3 /* InterviewAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InterviewAction.h; sourceTree = "<group>"; };
 		9565F74074E404CF92C71F251BA133A8 /* Cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 		A28221D7731B571C2CD8237116C3F31A /* IMediaStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IMediaStyle.h; sourceTree = "<group>"; };
 		A2FF613F1D5E4200F6B55A6CED7FD529 /* Value.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
 		A3F37A5E3A14BCC58735418330EDDA80 /* OPGResourceBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = OPGResourceBundle.bundle; path = OPGFeedbackSDK/Assets/OPGResourceBundle.bundle; sourceTree = "<group>"; };
-		A45C7A9900FFBFAC7DE38DBEB1210438 /* OPGFeedbackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = OPGFeedbackSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A45C7A9900FFBFAC7DE38DBEB1210438 /* OPGFeedbackSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = OPGFeedbackSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A47B2261560CF98F5C141F71B2983426 /* IOMIResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IOMIResponse.h; sourceTree = "<group>"; };
 		A4B41587EC6B93B825B9F3E5C6D81DDF /* OPGInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OPGInvokedUrlCommand.h; sourceTree = "<group>"; };
 		A59990BA1EFD629B36CD71E66E3530C1 /* InterviewSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InterviewSession.h; sourceTree = "<group>"; };
@@ -670,7 +670,6 @@
 				F82184D533680145D1828F2D5D6B5F08 /* UIImage+CropScaleOrientation.h */,
 				DCB36513FB1C9B88053681BDC505FD1C /* zxing-all-in-one.h */,
 			);
-			name = "Other Supporting Files";
 			path = "Other Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -1340,7 +1339,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1618,6 +1617,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
 				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = OPGFeedbackSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1633,6 +1633,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OPGFeedbackSDK";
 				INFOPLIST_FILE = "Target Support Files/OPGFeedbackSDK/ResourceBundle-OPGFeedbackSDK-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = OPGFeedbackSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
