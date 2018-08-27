@@ -18,8 +18,8 @@ import Foundation
 class SurveyListViewController : UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var surveyListTableView : UITableView!
-    var surveyListArray : NSArray!                        // Array of OPGSurvey Class from Previous ViewController
-    var surveyReference : NSString!
+    var surveyListArray: NSArray!                        // Array of OPGSurvey Class from Previous ViewController
+    var surveyReference: NSString!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
         let tableViewCell : SurveyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! SurveyTableViewCell
         /* OPGSurvey class has properties such as Name, description, IsOffline, LastUpdatedDate, IsGeoFencing, ScriptID and SurveyReference
          Getting instance of OPGSurvey from the array */
-        let survey : OPGSurvey = surveyListArray.object(at: (indexPath as NSIndexPath).row) as! OPGSurvey
+        let survey: OPGSurvey = surveyListArray.object(at: (indexPath as NSIndexPath).row) as! OPGSurvey
         tableViewCell.fillCell(survey)                // filling the custom tableview cell with OnePoint Survey class Instance
         return tableViewCell 
     }
@@ -50,7 +50,7 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let survey : OPGSurvey = self.surveyListArray.object(at: (indexPath as NSIndexPath).row) as! OPGSurvey
+        let survey: OPGSurvey = self.surveyListArray.object(at: (indexPath as NSIndexPath).row) as! OPGSurvey
         self.surveyReference = survey.surveyReference as NSString?    // Survey reference property of OPGSurvey class is passed to next controller which is required to run the survey.
         self.performSegue(withIdentifier: "embedTakeSurvey", sender: self)
     }
@@ -59,7 +59,7 @@ class SurveyListViewController : UIViewController, UITableViewDataSource, UITabl
         if(segue.identifier == "embedTakeSurvey")
         {
             // Get TakeSurveyViewController view
-            let viewController : TakeSurveyViewController = segue.destination as! TakeSurveyViewController
+            let viewController: TakeSurveyViewController = segue.destination as! TakeSurveyViewController
             viewController.surveyRef=self.surveyReference as String
         }
     }

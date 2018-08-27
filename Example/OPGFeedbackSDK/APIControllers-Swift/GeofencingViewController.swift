@@ -13,9 +13,9 @@ import CoreLocation
 class GeofencingViewController: UIViewController, OPGGeoFenceSurveyDelegate, CLLocationManagerDelegate
 {
     var geo = OPGGeoFence.sharedInstance()
-    @IBOutlet weak var switchControl : UISwitch!
-    var arrayLocations : NSArray = []
-    var alertsArray : Array<Any> = []
+    @IBOutlet weak var switchControl: UISwitch!
+    var arrayLocations: NSArray = []
+    var alertsArray: Array<Any> = []
     var myLocation: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
@@ -60,7 +60,7 @@ class GeofencingViewController: UIViewController, OPGGeoFenceSurveyDelegate, CLL
     }
     
     @IBAction func switchTapped(_ sender: AnyObject) {
-        let custom : UISwitch = sender as! UISwitch
+        let custom: UISwitch = sender as! UISwitch
 
         if custom.isOn {
             print("ON")

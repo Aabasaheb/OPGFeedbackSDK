@@ -10,10 +10,10 @@ import UIKit
 
 class DemoSurveyViewController: UIViewController, UITextFieldDelegate
 {
-    @IBOutlet weak var txtUsername : UITextField!
-    @IBOutlet weak var txtSharedKey : UITextField!
-    var surveyList : NSArray = []
-    var obj:OPGAuthenticate!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtSharedKey: UITextField!
+    var surveyList: NSArray = []
+    var obj: OPGAuthenticate!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.txtSharedKey.delegate=self

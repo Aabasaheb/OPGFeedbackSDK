@@ -34,6 +34,8 @@
 		7898AC0B1F8E1503005CA7D2 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898ABF91F8E1503005CA7D2 /* TakeSurveyViewController.swift */; };
 		7898AC0C1F8E1503005CA7D2 /* UpdatePanellistProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898ABFA1F8E1503005CA7D2 /* UpdatePanellistProfileViewController.swift */; };
 		7898AC0D1F8E1503005CA7D2 /* UploadMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898ABFB1F8E1503005CA7D2 /* UploadMediaViewController.swift */; };
+		789B0B3C212FD98800B9FFB7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B0B3B212FD98800B9FFB7 /* RootViewController.swift */; };
+		789B0B3D212FD98800B9FFB7 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B0B3B212FD98800B9FFB7 /* RootViewController.swift */; };
 		8A6C49BC488A7108560CB23F /* Pods_OPGFeedbackSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB40136BC36A868956DC1B44 /* Pods_OPGFeedbackSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,7 @@
 		7898ABF91F8E1503005CA7D2 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TakeSurveyViewController.swift; path = "APIControllers-Swift/TakeSurveyViewController.swift"; sourceTree = "<group>"; };
 		7898ABFA1F8E1503005CA7D2 /* UpdatePanellistProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatePanellistProfileViewController.swift; path = "APIControllers-Swift/UpdatePanellistProfileViewController.swift"; sourceTree = "<group>"; };
 		7898ABFB1F8E1503005CA7D2 /* UploadMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadMediaViewController.swift; path = "APIControllers-Swift/UploadMediaViewController.swift"; sourceTree = "<group>"; };
+		789B0B3B212FD98800B9FFB7 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = "APIControllers-Swift/RootViewController.swift"; sourceTree = "<group>"; };
 		8F81FDC81155A950DE2E721D /* Pods-OPGFeedbackSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OPGFeedbackSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OPGFeedbackSDK_Tests/Pods-OPGFeedbackSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		961238ED6627C5F69D1D3939 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B6B03BFA0917050337D64E1E /* Pods_OPGFeedbackSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OPGFeedbackSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +209,7 @@
 		7898ABE91F8E14DF005CA7D2 /* APIControllers-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				789B0B3B212FD98800B9FFB7 /* RootViewController.swift */,
 				7898ABEA1F8E1503005CA7D2 /* AuthenticationViewController.swift */,
 				7898ABEB1F8E1503005CA7D2 /* AuthenticationWithSocialMediaViewController.swift */,
 				7898ABEC1F8E1503005CA7D2 /* ChangePasswordViewController.swift */,
@@ -424,6 +428,7 @@
 				7898AC0A1F8E1503005CA7D2 /* SurveyTableViewController.swift in Sources */,
 				7898AC021F8E1503005CA7D2 /* ForgotPasswordViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				789B0B3C212FD98800B9FFB7 /* RootViewController.swift in Sources */,
 				7898AC0B1F8E1503005CA7D2 /* TakeSurveyViewController.swift in Sources */,
 				7898ABE51F8E14C1005CA7D2 /* ApiTableViewController.swift in Sources */,
 				7898AC0C1F8E1503005CA7D2 /* UpdatePanellistProfileViewController.swift in Sources */,
@@ -438,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789B0B3D212FD98800B9FFB7 /* RootViewController.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,3 +22,4 @@
 
 #import "OPGGeoFence.h"
 #import "OPGGeofenceSurvey.h"
+#import "OPGReachability.h"

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AuthenticationViewController: UIViewController, UITextFieldDelegate
+class AuthenticationViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    var obj : OPGAuthenticate?
+    var authObj: OPGAuthenticate?
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,25 +30,19 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
         do {
-            obj = try sdk.authenticate(self.username.text, password: self.password.text)
+            authObj = try sdk.authenticate(self.username.text, password: self.password.text)
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
         }
         
-        if obj!.isSuccess.int32Value==1
+        if authObj!.isSuccess.int32Value==1
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Authentication Successful", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            super.showAlert(alertMessage: "Authentication Successful")
         }
         else
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Authentication Failed", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            super.showAlert(alertMessage: "Authentication Failed")
         }
     }
     

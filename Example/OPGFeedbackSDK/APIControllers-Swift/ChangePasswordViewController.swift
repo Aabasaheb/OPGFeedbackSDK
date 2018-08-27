@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChangePasswordViewController: UIViewController, UITextFieldDelegate
+class ChangePasswordViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var txtCurrPass: UITextField!
     @IBOutlet weak var txtNewPass: UITextField!
-    var obj : OPGChangePassword!
+    var obj: OPGChangePassword!
     override func viewDidLoad() {
         super.viewDidLoad()
         txtNewPass.delegate=self
@@ -41,17 +41,11 @@ class ChangePasswordViewController: UIViewController, UITextFieldDelegate
         }
         if (obj.isSuccess.boolValue == true)
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Password Changed Successfully", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            super.showAlert(alertMessage: "Password Changed Successfully")
         }
         else
         {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Password Change Failed", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+            super.showAlert(alertMessage: "Password Change Failed")
         }
     }
 }

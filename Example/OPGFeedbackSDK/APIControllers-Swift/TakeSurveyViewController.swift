@@ -16,10 +16,10 @@ import Foundation
 import UIKit
 
  
-class TakeSurveyViewController : OPGViewController, OPGSurveyDelegate
+class TakeSurveyViewController: OPGViewController, OPGSurveyDelegate
 {
-    @IBOutlet weak var spinner : UIActivityIndicatorView!
-    var surveyRef : String!                        // Array of OPGSurvey Class from Previous ViewController
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    var surveyRef: String!                        // Array of OPGSurvey Class from Previous ViewController
     
     override func viewDidLoad() {
         self.surveyDelegate = self;

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class GetScriptViewController: UIViewController, UITextFieldDelegate
+class GetScriptViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var surveyId: UITextField!
     @IBOutlet weak var surveyName: UITextField!
     @IBOutlet weak var surveyRef: UITextField!
 
-    var obj : OPGScript?
+    var obj: OPGScript?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,19 +31,12 @@ class GetScriptViewController: UIViewController, UITextFieldDelegate
         return true
     }
 
-    func showAlert(titleStr: String, message: String) {
-        let alertController = UIAlertController(title: titleStr, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
-    }
-
     @IBAction func getScript(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
         let survey = OPGSurvey()
         if((self.surveyId.text?.isEmpty)! ||  (self.surveyRef.text?.isEmpty)! || (self.surveyName.text?.isEmpty)!) {
-            self.showAlert(titleStr: "OPGSDKv0.1.5", message: "Please provide a valid input")
+            super.showAlert(alertMessage: "Please provide a valid input")
             return
         }
         let surveyIdInt = Int(self.surveyId.text!)
@@ -58,13 +51,11 @@ class GetScriptViewController: UIViewController, UITextFieldDelegate
             print("GetSCript Failed")         /* @"Error Occured. Contact Support!" */
         }
         
-        if ( obj?.isSuccess.int32Value==1)
-        {
-            self.showAlert(titleStr: "OPGSDKv0.1.5", message: "Script Download Successful!")
+        if ( obj?.isSuccess.int32Value==1) {
+            super.showAlert(alertMessage: "Script Download Successful!")
         }
-        else
-        {
-            self.showAlert(titleStr: "OPGSDKv0.1.5", message: "Script Download Failed!")
+        else {
+            super.showAlert(alertMessage: "Script Download Failed!")
         }
     }
 }

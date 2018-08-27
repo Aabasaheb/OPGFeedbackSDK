@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthenticationWithSocialMediaViewController: UIViewController, UITextFieldDelegate
+class AuthenticationWithSocialMediaViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var txtGoogleToken: UITextField!
     @IBOutlet weak var txtFacebookToken: UITextField!
@@ -21,57 +21,44 @@ class AuthenticationWithSocialMediaViewController: UIViewController, UITextField
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func authenticateWithGoogle(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        var obj : OPGAuthenticate?
+        var authObj: OPGAuthenticate?
         do {
-            obj = try sdk.authenticate(withGoogle: "")
+            authObj = try sdk.authenticate(withGoogle: "")
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
         }
         
-        if obj!.isSuccess.int32Value==1
-        {
-            self.showAlert(alertMessage: "Authentication Successful")
+        if authObj!.isSuccess.int32Value == 1 {
+            super.showAlert(alertMessage: "Authentication Successful")
         }
-        else
-        {
-            self.showAlert(alertMessage: (obj?.statusMessage)!)
+        else {
+            super.showAlert(alertMessage: (authObj?.statusMessage)!)
         }
     }
 
     @IBAction func authenticateWithFacebook(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        var obj : OPGAuthenticate?
+        var authObj: OPGAuthenticate?
         do {
-            obj = try sdk.authenticate(withFacebook: "")
+            authObj = try sdk.authenticate(withFacebook: "")
         }
         catch{
             print("Authentication Failed")         /* @"Error Occured. Contact Support!" */
         }
         
-        if obj!.isSuccess.int32Value==1
-        {
-            self.showAlert(alertMessage: "Authentication Successful")
+        if authObj!.isSuccess.int32Value == 1 {
+            super.showAlert(alertMessage: "Authentication Successful")
         }
-        else
-        {
-            self.showAlert(alertMessage: (obj?.statusMessage)!)
+        else {
+            super.showAlert( alertMessage: (authObj?.statusMessage)!)
         }
-    }
-
-    func showAlert(alertMessage : String)
-    {
-        let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: alertMessage, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method

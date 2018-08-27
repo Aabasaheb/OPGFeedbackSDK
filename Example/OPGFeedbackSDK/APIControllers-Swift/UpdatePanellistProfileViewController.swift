@@ -8,10 +8,10 @@
 
 import UIKit
 
-class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegate
+class UpdatePanellistProfileViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
-    var datePicker : UIDatePicker!
+    var datePicker: UIDatePicker!
 
     @IBOutlet weak var txtTitle: UITextField!
     @IBOutlet weak var txtFname: UITextField!
@@ -28,16 +28,16 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        txtTitle.delegate=self
-        txtFname.delegate=self
-        txtLname.delegate=self
-        txtEmail.delegate=self
-        txtMobNo.delegate=self
-        txtAddr1.delegate=self
-        txtAddr2.delegate=self
-        txtDOB.delegate=self
-        txtGender.delegate=self
-        txtPostalCode.delegate=self
+        txtTitle.delegate = self
+        txtFname.delegate = self
+        txtLname.delegate = self
+        txtEmail.delegate = self
+        txtMobNo.delegate = self
+        txtAddr1.delegate = self
+        txtAddr2.delegate = self
+        txtDOB.delegate = self
+        txtGender.delegate = self
+        txtPostalCode.delegate = self
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
@@ -85,17 +85,16 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
     
     func getProfileSwift() -> OPGPanellistProfile
     {
-        let obj : OPGPanellistProfile = OPGPanellistProfile()
-        obj.title=txtTitle.text
-        obj.firstName=txtFname.text
-        obj.lastName=txtLname.text
-        obj.email=txtEmail.text
-        obj.mobileNumber=txtMobNo.text
-        obj.address1=txtAddr1.text
-        obj.address2=txtAddr2.text
-        obj.dob=txtDOB.text
-        if(!(txtGender.text?.isEmpty)!)
-        {
+        let obj: OPGPanellistProfile = OPGPanellistProfile()
+        obj.title = txtTitle.text
+        obj.firstName = txtFname.text
+        obj.lastName = txtLname.text
+        obj.email = txtEmail.text
+        obj.mobileNumber = txtMobNo.text
+        obj.address1 = txtAddr1.text
+        obj.address2 = txtAddr2.text
+        obj.dob = txtDOB.text
+        if(!(txtGender.text?.isEmpty)!) {
             obj.gender=NSNumber(value: Int(txtGender.text!)! as Int)
         }
         obj.postalCode=txtPostalCode.text
@@ -108,24 +107,16 @@ class UpdatePanellistProfileViewController: UIViewController, UITextFieldDelegat
     @IBAction func updateProfile(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        let profile : OPGPanellistProfile? = self.getProfileSwift()
+        let profile: OPGPanellistProfile? = self.getProfileSwift()
         if(!(profile?.firstName.isEmpty)!)
         {
             do {
                 try sdk.update(profile)
-                let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Profile Updated Successfully", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(defaultAction)
-                present(alertController, animated: true, completion: nil)
-
+                super.showAlert(alertMessage: "Profile Updated Successfully")
             }
             catch{
-                print("Profile Update Failed")         /* @"Error Occured. Contact Support!" */
-
-                let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Profile Update Failed", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(defaultAction)
-                present(alertController, animated: true, completion: nil)
+                print("Profile Update Failed")    
+                super.showAlert(alertMessage: "Profile Update Failed")
             }
         }
     }

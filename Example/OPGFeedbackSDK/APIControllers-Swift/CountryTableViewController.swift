@@ -10,7 +10,7 @@ import UIKit
 
 class CountryTableViewController: UITableViewController
 {
-    var countryList : [OPGCountry] = []
+    var countryList: [OPGCountry] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Country"
@@ -43,7 +43,7 @@ class CountryTableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Country", for: indexPath)
-        let country : OPGCountry = self.countryList[indexPath.row]
+        let country: OPGCountry = self.countryList[indexPath.row]
         cell.textLabel?.text=country.name
         return cell
     }

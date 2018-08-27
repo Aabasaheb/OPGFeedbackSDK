@@ -24,16 +24,16 @@ class GetPanellistProfileViewController: UIViewController, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        panelTitle.delegate=self
-        panelFname.delegate=self
-        panelLname.delegate=self
-        panelEmail.delegate=self
-        panelMobNo.delegate=self
-        panelAddr1.delegate=self
-        panelAddr2.delegate=self
-        panelDOB.delegate=self
-        panelGender.delegate=self
-        panelPostalCode.delegate=self
+        panelTitle.delegate = self
+        panelFname.delegate = self
+        panelLname.delegate = self
+        panelEmail.delegate = self
+        panelMobNo.delegate = self
+        panelAddr1.delegate = self
+        panelAddr2.delegate = self
+        panelDOB.delegate = self
+        panelGender.delegate = self
+        panelPostalCode.delegate = self
     }
     
     override func didReceiveMemoryWarning() {

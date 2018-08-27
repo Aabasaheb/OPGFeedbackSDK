@@ -8,9 +8,9 @@
 
 import UIKit
 
-class UploadMediaViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class UploadMediaViewController: RootViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-    var mediaID : NSString?
+    var mediaID: NSString?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +25,7 @@ class UploadMediaViewController: UIViewController,UIImagePickerControllerDelegat
     {
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = false
-        imagePicker.delegate=self
+        imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
@@ -40,12 +40,10 @@ class UploadMediaViewController: UIViewController,UIImagePickerControllerDelegat
         let localPath         = photoURL.appendingPathComponent("profileimage")
         let data              = UIImageJPEGRepresentation(image, 0.9)
 
-        do
-        {
+        do {
             try data?.write(to: localPath!, options: Data.WritingOptions.atomic)
         }
-        catch
-        {
+        catch {
             // Catch exception here and act accordingly
         }
 
@@ -61,21 +59,12 @@ class UploadMediaViewController: UIViewController,UIImagePickerControllerDelegat
         self.showAlert()
     }
 
-    func showAlert()
-    {
-        if(self.mediaID==nil)
-        {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Media upload failed", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+    func showAlert() {
+        if(self.mediaID == nil) {
+            super.showAlert(alertMessage: "Media upload failed")
         }
-        else
-        {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Uploaded media ID is \(self.mediaID!)", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+        else {
+            super.showAlert(alertMessage: "Uploaded media ID is \(self.mediaID!)")
         }
     }
 }

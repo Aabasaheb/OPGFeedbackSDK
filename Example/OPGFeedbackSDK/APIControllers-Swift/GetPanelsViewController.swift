@@ -10,12 +10,11 @@ import UIKit
 
 class GetPanelsViewController: UITableViewController
 {
-    var panelsObjList : NSArray = []
-    var panelsIDList : NSArray = []
-    var panellistPanelObj : OPGPanellistPanel!
+    var panelsObjList: NSArray = []
+    var panelsIDList: NSArray = []
+    var panellistPanelObj: OPGPanellistPanel!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorColor = UIColor.orange
         let sdk = OPGSDK()        // Creating OPGSDK instance
@@ -24,17 +23,14 @@ class GetPanelsViewController: UITableViewController
             self.panelsObjList = panellistPanelObj.panelsArray as NSArray       // Getting list of Panels assigned to user
             self.panelsIDList = self.getPanelsIDList(self.panelsObjList)
         }
-        catch{
+        catch {
             print("Get Panels not working")         /* @"Error Occured. Contact Support!" */
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func getPanelsIDList(_ obj : NSArray) -> NSArray
-    {
-        let panelsIDArray : NSMutableArray = []
-        for panel in obj as! [OPGPanel]
-        {
+    func getPanelsIDList(_ obj: NSArray) -> NSArray {
+        let panelsIDArray: NSMutableArray = []
+        for panel in obj as! [OPGPanel] {
             panelsIDArray.add(panel.panelName)
         }
         return panelsIDArray
@@ -48,8 +44,7 @@ class GetPanelsViewController: UITableViewController
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "CELL") as UITableViewCell?
         if (cell == nil) {
             cell = UITableViewCell(style:.default, reuseIdentifier: "CELL")

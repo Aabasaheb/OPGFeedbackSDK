@@ -12,8 +12,7 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
 {
 
     @IBOutlet weak var panelIDField: UITextField!
-    //var panelID : UITextField!
-    var surveyList : NSArray = []
+    var surveyList: NSArray = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,7 +57,7 @@ class GetSurveysViewController: UIViewController, UITextFieldDelegate
     {
         if(segue.identifier == "getUserSurvey")
         {
-            let surveyListVC : SurveyTableViewController  = segue.destination as! SurveyTableViewController
+            let surveyListVC: SurveyTableViewController  = segue.destination as! SurveyTableViewController
             surveyListVC.surveyListArray = self.surveyList
         }
     }

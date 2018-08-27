@@ -10,7 +10,7 @@ import UIKit
 
 class SurveyTableViewController: UITableViewController
 {
-    var surveyListArray : NSArray!
+    var surveyListArray: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()

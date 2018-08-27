@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController, UITextFieldDelegate
+class ForgotPasswordViewController: RootViewController, UITextFieldDelegate
 {
     @IBOutlet weak var txtEmailID: UITextField!
-    var obj : OPGForgotPassword!
+    var obj: OPGForgotPassword!
     override func viewDidLoad() {
         super.viewDidLoad()
         txtEmailID.delegate=self
@@ -31,7 +31,6 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate
     @IBAction func forgotPass(_ sender: AnyObject)
     {
         let sdk = OPGSDK()        // Creating OPGSDK instance
-        
         do {
             obj = try sdk.forgotPassword(txtEmailID.text)
         }
@@ -39,19 +38,11 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate
             print("Forgot Password Failed")         /* @"Error Occured. Contact Support!" */
         }
         
-        if (obj?.isSuccess.int32Value==1)
-        {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Mail Sent Successfully", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+        if (obj?.isSuccess.int32Value==1) {
+            super.showAlert(alertMessage: "Mail Sent Successfully")
         }
-        else
-        {
-            let alertController = UIAlertController(title: "OPGSDKv0.1.5", message: "Mail Sending Failed", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
+        else {
+            super.showAlert(alertMessage: "Mail Sending Failed")
         }
     }
 }
