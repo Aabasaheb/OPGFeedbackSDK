@@ -393,7 +393,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh",
 				"${PODS_ROOT}/../../OPGFeedbackSDK/Assets/OPGResourceBundle.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/OPGFeedbackSDK/OPGFeedbackSDK.bundle",
 			);
@@ -404,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OPGFeedbackSDK_Example/Pods-OPGFeedbackSDK_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
