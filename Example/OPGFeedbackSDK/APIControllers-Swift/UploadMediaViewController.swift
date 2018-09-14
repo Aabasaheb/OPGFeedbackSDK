@@ -51,8 +51,8 @@ class UploadMediaViewController: RootViewController,UIImagePickerControllerDeleg
         do {
             mediaID = try sdk.uploadMediaFile(localPath?.absoluteString) as NSString?
         }
-        catch{
-            print("Upload Media Media Failed")         /* @"Error Occured. Contact Support!" */
+        catch let err as NSError {
+            print(err.localizedDescription)         /* @"Error Occured. Contact Support!" */
         }
         print("Uploaded media ID is \(String(describing: mediaID))" )
         self.dismiss(animated: true, completion: nil);
