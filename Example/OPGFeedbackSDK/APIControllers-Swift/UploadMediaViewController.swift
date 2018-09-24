@@ -30,15 +30,18 @@ class UploadMediaViewController: RootViewController,UIImagePickerControllerDeleg
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         print("documentsPath: \(documentsPath)")
-        let image:UIImage = (info[UIImagePickerControllerOriginalImage] as? UIImage)!
+        let image:UIImage = (info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage)!
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         let photoURL          = NSURL(fileURLWithPath: documentDirectory)
         let localPath         = photoURL.appendingPathComponent("profileimage")
-        let data              = UIImageJPEGRepresentation(image, 0.9)
+        let data              = image.jpegData(compressionQuality: 0.9)
 
         do {
             try data?.write(to: localPath!, options: Data.WritingOptions.atomic)
@@ -67,4 +70,14 @@ class UploadMediaViewController: RootViewController,UIImagePickerControllerDeleg
             super.showAlert(alertMessage: "Uploaded media ID is \(self.mediaID!)")
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

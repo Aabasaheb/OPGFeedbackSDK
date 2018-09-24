@@ -19,8 +19,8 @@ class RootViewController: UIViewController {
     }
 
     func showAlert(alertMessage: String) {
-        let alert = UIAlertController(title: "OPGSDKv0.1.6", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: "OPGSDKv0.1.6", message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 

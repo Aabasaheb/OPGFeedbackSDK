@@ -80,12 +80,12 @@ class GeofencingViewController: UIViewController, OPGGeoFenceSurveyDelegate, CLL
     }
 
     func showAlert(regionEntered: OPGGeofenceSurvey) {
-        let alert = UIAlertController.init(title: "OPGSDKv0.1.5", message: ("Welcome to \(regionEntered.address!)!. You have a survey available!"), preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Take Survey", style: UIAlertActionStyle.default, handler: {
+        let alert = UIAlertController.init(title: "OPGSDKv0.1.5", message: ("Welcome to \(regionEntered.address!)!. You have a survey available!"), preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Take Survey", style: UIAlertAction.Style.default, handler: {
             action in
             self.alertsArray.removeFirst()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
             action in
             self.alertsArray.removeFirst()
             if self.alertsArray.count > 0 {

@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        OPGSDK.initialize(withUserName: "SDK_Username", withSDKKey: "SDK_SharedKey")
+        OPGSDK.initialize(withUserName: "SDK_USERNAME", withSDKKey:"SDK_SHARED_KEY")
         OPGSDK.setAppVersion("APP_VERSION")
         return true
     }

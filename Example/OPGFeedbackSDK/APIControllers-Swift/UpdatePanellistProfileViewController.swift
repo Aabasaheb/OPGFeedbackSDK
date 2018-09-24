@@ -49,8 +49,8 @@ class UpdatePanellistProfileViewController: RootViewController, UITextFieldDeleg
     {
         if textField.isEqual(txtPostalCode) || textField.isEqual(txtGender) || textField.isEqual(txtDOB) || textField.isEqual(txtAddr2) || textField.isEqual(txtAddr1)
         {
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-            NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector:  #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         }
         if textField.isEqual(txtDOB)
         {
@@ -127,7 +127,7 @@ class UpdatePanellistProfileViewController: RootViewController, UITextFieldDeleg
         let rect = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216)
         self.datePicker = UIDatePicker(frame:rect)
         self.datePicker.backgroundColor = UIColor.white
-        self.datePicker.datePickerMode = UIDatePickerMode.date
+        self.datePicker.datePickerMode = UIDatePicker.Mode.date
         textField.inputView = self.datePicker
         
         // ToolBar
