@@ -36,7 +36,7 @@ class GeofencingViewController: UIViewController, OPGGeoFenceSurveyDelegate, CLL
                 DispatchQueue.main.async {
                     if self.arrayLocations.count > 1 {
                         var error: NSError?
-                        self.geo?.startMonitor(forGeoFencing: Array(self.arrayLocations) as! [OPGGeofenceSurvey], error: &error)
+                        self.geo?.startMonitor(forGeoFencing: Array(self.arrayLocations) as? [OPGGeofenceSurvey], error: &error)
                         if error != nil {
                             print(error.debugDescription)
                         }
