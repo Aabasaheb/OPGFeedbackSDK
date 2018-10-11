@@ -32,6 +32,7 @@
 #import "WebPlayer.h"
 #import "Controller.h"
 #import "WebSession.h"
+#import "OPGPanellistProfile.h"
 
 
 @interface OPGBaseController : UIViewController <UIWebViewDelegate, OPGScreenOrientationDelegate, IosRuntimeInteractor>
