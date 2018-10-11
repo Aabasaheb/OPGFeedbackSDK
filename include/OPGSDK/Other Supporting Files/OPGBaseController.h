@@ -126,4 +126,11 @@
                 surveyID:(NSNumber *)surveyID
                  panelID:(NSNumber *)panelID
              panellistID:(NSNumber *)panellistID;
+
+-(void)loadOfflineSurvey:(NSString *)scriptPath
+              surveyName:(NSString *)surveyName
+                surveyID:(NSNumber *)surveyID
+                 panelID:(NSNumber *)panelID
+             panellistID:(NSNumber *)panellistID
+             panellistProfile:(OPGPanellistProfile*)panellistProfile;
 @end
